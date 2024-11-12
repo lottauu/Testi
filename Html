@@ -1,44 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breakout Game</title>
-    <style>
-        canvas {
-            display: block;
-            margin: 0 auto;
-            background-color: #000;
-        }
-    </style>
-</head>
-<body>
-    <canvas id="breakoutCanvas" width="500" height="500"></canvas>
-
-    <script>
-        const canvas = document.getElementById('breakoutCanvas');
-        const ctx = canvas.getContext('2d');
-
-        // Pelin asetukset
-        const brickRowCount = 5;
-        const brickColumnCount = 7;
-        const brickWidth = 60;
-        const brickHeight = 20;
-        const brickPadding = 10;
-        const brickOffsetTop = 30;
-        const brickOffsetLeft = 35;
-
-        // Tiilien alustus
-        let bricks = [];
-        for (let c = 0; c < brickColumnCount; c++) {
-            bricks[c] = [];
-            for (let r = 0; r < brickRowCount; r++) {
-                bricks[c][r] = { x: 0, y: 0, status: 1 }; // status: 1 = näkyvä, 0 = rikottu
-            }
-        }
-
-        // Piirrä tiilet
-        function drawBricks() {
+function drawBricks() {
             for (let c = 0; c < brickColumnCount; c++) {
                 for (let r = 0; r < brickRowCount; r++) {
                     if (bricks[c][r].status == 1) {
