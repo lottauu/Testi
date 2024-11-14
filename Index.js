@@ -24,7 +24,7 @@ let brickPadding = 10;
 
 let brickOffsetTop = 30;
 
-let brickOffsetLeft = 35;
+let brickOffsetLeft = 10;
 
 
 
